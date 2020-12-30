@@ -31,7 +31,7 @@ class TabBarController : UITabBarController {
         tabBar.barTintColor = UIColor.marvelBack()
         self.tabBar.isTranslucent = false
         tabBar.unselectedItemTintColor = .white
-        tabBar.tintColor = .white
+        tabBar.tintColor = .goldBack()
         self.navigationController?.navigationBar.isHidden = true
         
     }
