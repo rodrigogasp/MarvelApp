@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (5.4.0)
+  - CryptoSwift (1.3.8)
+  - Gifu (3.3)
+  - IQKeyboardManagerSwift (6.5.6)
+  - SDWebImage (5.9.5):
+    - SDWebImage/Core (= 5.9.5)
+  - SDWebImage/Core (5.9.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - CryptoSwift
+  - Gifu
+  - IQKeyboardManagerSwift
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CryptoSwift
+    - Gifu
+    - IQKeyboardManagerSwift
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
+  CryptoSwift: 01b0f0cba1d5c212e5a335ff6c054fb75a204f00
+  Gifu: 97c2a3c3865fbc834ab13f797e2e8e7729a1853c
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  SDWebImage: 0b2ba0d56479bf6a45ecddbfd5558bea93150d25
+
+PODFILE CHECKSUM: 497c1f4d3bede740894ad2180572e1f97eeddbe5
+
+COCOAPODS: 1.10.0
