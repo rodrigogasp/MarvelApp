@@ -62,7 +62,7 @@ class FALSpinner {
         
         //--------------------- Loading Card --------------------------------
         
-        let cardWidth = width*0.3
+        let cardWidth = width*0.5
         
         loadingPopup = LoadingPopup(frame: CGRect(x: 0, y: 0, width: cardWidth, height: cardWidth*1.277))
         loadingPopup.center.x = viewController.view.center.x

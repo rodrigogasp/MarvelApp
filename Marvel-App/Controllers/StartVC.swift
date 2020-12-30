@@ -33,14 +33,7 @@ class StartVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.startLoading()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
-            
-            self.stopLoading()
-            
-        }
+
         
     }
 
