@@ -37,7 +37,7 @@ class HomeView: UIView {
         
         //------------------------- Scroll View -----------------------------
 
-        scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+        scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: width, height: height - parent.tabBarController!.tabBar.frame.height))
         scrollView.isScrollEnabled = true
         scrollView.backgroundColor = .marvelBack()
 

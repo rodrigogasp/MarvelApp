@@ -17,6 +17,9 @@ extension UIColor{
         return UIColor(hex: 0xc4a454)
     }
     
+    static func bronzeTabBar() -> UIColor {
+        return UIColor(hex: 0xa46628)
+    }
     
     convenience init(red: Int, green: Int, blue: Int) {
         assert(red >= 0 && red <= 255, "Invalid red component")

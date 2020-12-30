@@ -42,6 +42,8 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.title = "Characters"
+        
         self.startLoading()
         
         CharactersAPI.getCharacters { (response) in

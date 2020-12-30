@@ -44,7 +44,7 @@ class CharactersCell: UITableViewCell {
         
         cardView = CardView(frame: CGRect(x: 0, y: 0, width: width*0.7, height: height))
         cardView.center.x = width/2
-        cardView.backgroundColor = .goldBack()
+        cardView.backgroundColor = .bronzeTabBar()
         cardView.layer.cornerRadius = 5
         
         addSubview(cardView)
