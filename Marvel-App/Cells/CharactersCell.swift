@@ -42,7 +42,7 @@ class CharactersCell: UITableViewCell {
         
         //---------------------------Card View-----------------------------
         
-        cardView = CardView(frame: CGRect(x: 0, y: 0, width: width*0.7, height: height))
+        cardView = CardView(frame: CGRect(x: 0, y: 0, width: width*0.8, height: height))
         cardView.center.x = width/2
         cardView.backgroundColor = .bronzeTabBar()
         cardView.layer.cornerRadius = 5
@@ -51,7 +51,7 @@ class CharactersCell: UITableViewCell {
         
         //---------------------------Image View View-----------------------------
         
-        imageViewview = UIImageView(frame: CGRect(x: 0, y: 0, width: width*0.7, height: 150))
+        imageViewview = UIImageView(frame: CGRect(x: 0, y: 0, width: width*0.8, height: 150))
         imageViewview.contentMode = .scaleAspectFill
         imageViewview.clipsToBounds = true
         imageViewview.center.x = width/2
@@ -62,7 +62,7 @@ class CharactersCell: UITableViewCell {
         
         //---------------------------Text-----------------------------
         
-        mainText = UILabel(frame: CGRect(x: 0, y: 160, width: width*0.65, height: 30))
+        mainText = UILabel(frame: CGRect(x: 0, y: 160, width: width*0.75, height: 30))
         mainText.textColor = .marvelBack()
         mainText.font = UIFont.defaultFont(size: 24, type: .regular)
         mainText.center.x = width/2

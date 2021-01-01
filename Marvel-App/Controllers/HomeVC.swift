@@ -89,9 +89,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        homeView.tableView.frame.size.height = CGFloat(210*self.characters.count)
+        homeView.tableView.contentSize = CGSize(width: view.frame.width, height: homeView.tableView.frame.size.height + homeView.tableView.frame.origin.y)
         
-        homeView.scrollView.contentSize = CGSize(width: homeView.scrollView.frame.width, height: homeView.tableView.frame.origin.y + homeView.tableView.frame.size.height)
+//        homeView.scrollView.contentSize = CGSize(width: homeView.scrollView.frame.width, height: homeView.tableView.frame.origin.y + homeView.tableView.frame.size.height)
         
         return self.characters.count
         

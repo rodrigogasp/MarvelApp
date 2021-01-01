@@ -14,7 +14,8 @@ class HomeView: UIView {
     **
     **********************************************************************************/
 
-    var scrollView: UIScrollView!
+    
+    var searchTextField : UITextField!
     
     var tableView : UITableView!
 
@@ -30,18 +31,23 @@ class HomeView: UIView {
         view.backgroundColor = .red
         
         let width = view.frame.size.width
-        let height = view.frame.size.height
+        let height = view.frame.size.height - parent.tabBarController!.tabBar.frame.height
         
-        var yPosition = CGFloat(0)
+        var yPosition = height*0.05
         
+        //------------------------- Search Text Field -----------------------------
         
-        //------------------------- Scroll View -----------------------------
-
-        scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: width, height: height - parent.tabBarController!.tabBar.frame.height))
-        scrollView.isScrollEnabled = true
-        scrollView.backgroundColor = .marvelBack()
-
-        view.addSubview(scrollView)
+        searchTextField = UITextField(frame: CGRect(x: 0, y: yPosition, width: width*0.8, height: 30))
+        searchTextField.backgroundColor = .white
+        searchTextField.placeholder = "Buscar por nome"
+        searchTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 30))
+        searchTextField.leftViewMode = .always
+        searchTextField.center.x = width/2
+        searchTextField.layer.cornerRadius = searchTextField.frame.height/2
+        
+        view.addSubview(searchTextField)
+        
+        yPosition = yPosition + searchTextField.frame.height + 15
         
         //-----------------------------Table View-------------------------------------
         
@@ -49,9 +55,9 @@ class HomeView: UIView {
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: width*0.1, right: 0)
-        tableView.isScrollEnabled = false
+        tableView.isScrollEnabled = true
         
-        scrollView.addSubview(tableView)
+        view.addSubview(tableView)
 
         
     }
