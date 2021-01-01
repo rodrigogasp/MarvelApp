@@ -14,7 +14,6 @@ class HomeView: UIView {
     **
     **********************************************************************************/
 
-    
     var searchTextField : UITextField!
     
     var tableView : UITableView!
@@ -28,7 +27,7 @@ class HomeView: UIView {
     init(view: UIView, parent: UIViewController) {
         super.init(frame: view.frame);
 
-        view.backgroundColor = .red
+        view.backgroundColor = .marvelBack()
         
         let width = view.frame.size.width
         let height = view.frame.size.height - parent.tabBarController!.tabBar.frame.height
