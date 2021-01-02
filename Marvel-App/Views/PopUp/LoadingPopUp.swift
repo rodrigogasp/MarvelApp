@@ -61,9 +61,9 @@ class LoadingPopup: UIView {
         //------------------------------- Text Label ---------------------------------
         
         loadingLabel = UILabel(frame: CGRect(x: 0, y: height*0.6, width: width*0.9, height: height*0.3))
-        loadingLabel.text = "Loading" + " ."
+        loadingLabel.text = "Carregando" + " ."
         loadingLabel.textAlignment = .left
-        loadingLabel.textColor = .black
+        loadingLabel.textColor = .white
         loadingLabel.sizeToFit()
         loadingLabel.center.x = width/2
         loadingLabel.frame.size.width += (width*0.9 - loadingLabel.frame.size.width)/2

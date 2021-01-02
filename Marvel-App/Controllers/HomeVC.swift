@@ -200,6 +200,14 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @objc func searchAction() {
         
+        if self.homeView.searchTextField.text!.isEmpty || self.homeView.searchTextField.text == nil {
+            
+            GenericAlert.genericAlert(self, title: "Você deve inserir um nome para a pesquisa", message: "", actions: [])
+            
+            return
+            
+        }
+        
         self.isSearch = false
         
         self.offset = 0
@@ -222,7 +230,19 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 
             } else {
                 
+                self.isSearch = true
+                
+                self.homeView.tableView.reloadData()
+                
+                self.homeView.barIcon.image = UIImage(named: "search")
+  
                 print(response.erroMessage)
+                
+                GenericAlert.genericAlert(self, title: "Erro ao pesquisar por '\(self.homeView.searchTextField.text!)'", message: "", actions: [])
+                
+                self.homeView.searchTextField.text = ""
+                
+                return
                 
             }
             

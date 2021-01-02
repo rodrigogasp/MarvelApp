@@ -33,6 +33,7 @@
 		04F9451E259CEDC60015DBAD /* CharactersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9451D259CEDC60015DBAD /* CharactersCell.swift */; };
 		04F94521259CEE0E0015DBAD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F94520259CEE0E0015DBAD /* CardView.swift */; };
 		04F94526259CF8510015DBAD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F94525259CF8510015DBAD /* TabBarController.swift */; };
+		04FDEB3E25A0F2C30004BA17 /* GenericAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDEB3D25A0F2C30004BA17 /* GenericAlert.swift */; };
 		5C0159091107958DD7506E2D /* Pods_Marvel_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E31CC4A2B6E7E84DEEC3BB /* Pods_Marvel_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		04F9451D259CEDC60015DBAD /* CharactersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCell.swift; sourceTree = "<group>"; };
 		04F94520259CEE0E0015DBAD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		04F94525259CF8510015DBAD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		04FDEB3D25A0F2C30004BA17 /* GenericAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericAlert.swift; sourceTree = "<group>"; };
 		4C27472FD00A53453FC7EA86 /* Pods-Marvel-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel-App.release.xcconfig"; path = "Target Support Files/Pods-Marvel-App/Pods-Marvel-App.release.xcconfig"; sourceTree = "<group>"; };
 		5E58315D3962DFA98123AF27 /* Pods-Marvel-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel-App.debug.xcconfig"; path = "Target Support Files/Pods-Marvel-App/Pods-Marvel-App.debug.xcconfig"; sourceTree = "<group>"; };
 		A5E31CC4A2B6E7E84DEEC3BB /* Pods_Marvel_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marvel_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 			children = (
 				04A83C52259C109C0089A8E5 /* Loading.swift */,
 				04F94520259CEE0E0015DBAD /* CardView.swift */,
+				04FDEB3D25A0F2C30004BA17 /* GenericAlert.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				04A83C18259C0B0F0089A8E5 /* AppDelegate.swift in Sources */,
 				04F94517259CED370015DBAD /* UIColor+Extension.swift in Sources */,
 				04F94508259CEC140015DBAD /* Character.swift in Sources */,
+				04FDEB3E25A0F2C30004BA17 /* GenericAlert.swift in Sources */,
 				04F94511259CEC810015DBAD /* DAOThumbnail.swift in Sources */,
 				04A83C4B259C0FCF0089A8E5 /* StartView.swift in Sources */,
 				04F9450E259CEC780015DBAD /* Thumbnail.swift in Sources */,
