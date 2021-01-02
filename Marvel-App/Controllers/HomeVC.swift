@@ -114,8 +114,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         homeView.tableView.contentSize = CGSize(width: view.frame.width, height: homeView.tableView.frame.size.height + homeView.tableView.frame.origin.y)
         
-//        homeView.scrollView.contentSize = CGSize(width: homeView.scrollView.frame.width, height: homeView.tableView.frame.origin.y + homeView.tableView.frame.size.height)
-        
         return self.characters.count + 1
         
     }
@@ -150,10 +148,12 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             if self.moreResults == true {
                 
                 cell.loadButton.setTitle("Carregar mais", for: .normal)
+                cell.loadButton.isUserInteractionEnabled = true
                 
             } else {
                 
                 cell.loadButton.setTitle("Sem mais resultados", for: .normal)
+                cell.loadButton.isUserInteractionEnabled = false
                 
             }
             
@@ -226,13 +226,13 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 
                 self.offset += response.characters.count
                 
-                self.homeView.tableView.reloadData()
+                self.reloadAndScroll()
                 
             } else {
                 
                 self.isSearch = true
                 
-                self.homeView.tableView.reloadData()
+                self.reloadAndScroll()
                 
                 self.homeView.barIcon.image = UIImage(named: "search")
   
@@ -278,7 +278,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     
                     self.characters = response.characters
                     
-                    self.homeView.tableView.reloadData()
+                    self.reloadAndScroll()
                     
                     self.stopLoading()
                     
@@ -348,6 +348,8 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                         
                     } else {
                         
+                        self.offset += 20
+                        
                         self.characters.append(contentsOf: response.characters)
                         
                         self.homeView.tableView.reloadData()
@@ -359,6 +361,19 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
             
         }
+        
+    }
+    
+    /* **************************************************************************************************
+     **
+     **  MARK: Reload and Scroll
+     **
+     ****************************************************************************************************/
+    
+    func reloadAndScroll() {
+        
+        self.homeView.tableView.reloadData()
+        self.homeView.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: UITableView.ScrollPosition.none, animated: true)
         
     }
     

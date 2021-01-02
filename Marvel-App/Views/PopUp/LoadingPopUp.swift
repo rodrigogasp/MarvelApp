@@ -122,13 +122,13 @@ class LoadingPopup: UIView {
         switch numberOfTimer {
             
         case 2:
-            loadingLabel.text = "Loading" + " .."
+            loadingLabel.text = "Carregando" + " .."
             
         case 3:
-            loadingLabel.text = "Loading" + " ..."
+            loadingLabel.text = "Carregando" + " ..."
             
         default:
-            loadingLabel.text = "Loading" + " ."
+            loadingLabel.text = "Carregando" + " ."
             
         }
         
