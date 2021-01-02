@@ -20,9 +20,9 @@ class CharactersAPI {
      **
      ***********************************************************************************/
     
-    static func getCharacters(callback: @escaping (ServerResponse) -> Void) {
+    static func getCharacters(offset : Int, callback: @escaping (ServerResponse) -> Void) {
         
-        let newURL = API.host + API.characters + "?ts=\(API.sharedInstance.ts)&" + "apikey=\(API.sharedInstance.publicKey)&hash=\(API.sharedInstance.hash)"
+        let newURL = API.host + API.characters + "?ts=\(API.sharedInstance.ts)&" + "apikey=\(API.sharedInstance.publicKey)&hash=\(API.sharedInstance.hash)&offset=\(offset)"
         
         
         print("request - getCharacters")

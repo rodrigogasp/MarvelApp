@@ -20,6 +20,8 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var characters : [Character] = []
     
+    var offset : Int = 0
+    
     /* **************************************************************************************************
      **
      **  MARK: View
@@ -44,27 +46,32 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         self.title = "Characters"
         
-        self.startLoading()
-        
-        CharactersAPI.getCharacters { (response) in
+        if self.characters.count == 0 {
             
-            if response.success {
+            self.startLoading()
+            
+            CharactersAPI.getCharacters(offset: 0) { (response) in
                 
-                self.characters = response.characters
-                
-                self.homeView.tableView.reloadData()
-                
-                self.stopLoading()
-                
-            } else {
-                
-                print(response.erroMessage)
-                
-                self.stopLoading()
+                if response.success {
+                    
+                    self.characters = response.characters
+                    
+                    self.homeView.tableView.reloadData()
+                    
+                    self.stopLoading()
+                    
+                } else {
+                    
+                    print(response.erroMessage)
+                    
+                    self.stopLoading()
+                    
+                }
                 
             }
             
         }
+        
         
     }
     
@@ -93,42 +100,90 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
 //        homeView.scrollView.contentSize = CGSize(width: homeView.scrollView.frame.width, height: homeView.tableView.frame.origin.y + homeView.tableView.frame.size.height)
         
-        return self.characters.count
+        return self.characters.count + 1
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 210
+        if indexPath.row == self.characters.count && self.characters.count != 0 {
+            
+            return 60
+            
+        }
+        
+        if self.characters.count != 0 {
+            
+            return 210
+            
+        }
+        
+        return 0
+        
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = CharactersCell(view: view)
-        
-//        if characters[indexPath.row].name != nil {
-//
-//            cell.mainText.text = characters[indexPath.row].name
-//
-//        }
-        
-        let urlString = "\(characters[indexPath.row].thumbnail.path).\(characters[indexPath.row].thumbnail.type)"
-        
-        
-        let url = URL(string: urlString)
-        
-        if url != nil {
+        if indexPath.row == self.characters.count && self.characters.count != 0 {
             
-            cell.imageViewview.sd_setImage(with: url, completed: nil)
-        
+            let cell = LoadMoreCell(view: view)
+            
+            return cell
+            
         }
         
-        cell.mainText.text = characters[indexPath.row].name
+        if self.characters.count != 0 {
+            
+            let cell = CharactersCell(view: view)
+            
+            let urlString = "\(characters[indexPath.row].thumbnail.path).\(characters[indexPath.row].thumbnail.type)"
+            
+            
+            let url = URL(string: urlString)
+            
+            if url != nil {
+                
+                cell.imageViewview.sd_setImage(with: url, completed: nil)
+            
+            }
+            
+            cell.mainText.text = characters[indexPath.row].name
+            
+            return cell
+            
+        }
         
-        return cell
+        return UITableViewCell()
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == self.characters.count {
+            
+            self.offset += 20
+            
+            self.startLoading()
+            
+            CharactersAPI.getCharacters(offset: self.offset) { (response) in
+                
+                self.stopLoading()
+                
+                if response.success {
+                    
+                    self.characters.append(contentsOf: response.characters)
+                    
+                    self.homeView.tableView.reloadData()
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
     
 }
 
