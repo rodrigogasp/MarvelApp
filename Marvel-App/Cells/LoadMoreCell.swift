@@ -42,9 +42,9 @@ class LoadMoreCell: UITableViewCell {
         loadButton.backgroundColor = .clear
         loadButton.layer.borderWidth = 1
         loadButton.layer.borderColor = UIColor.white.cgColor
-        loadButton.isUserInteractionEnabled = false
+        loadButton.isUserInteractionEnabled = true
         
-        addSubview(loadButton)
+        contentView.addSubview(loadButton)
 
         
     }

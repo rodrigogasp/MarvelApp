@@ -58,6 +58,7 @@ class HomeView: UIView {
         barIcon.clipsToBounds = true
         barIcon.center.y = searchTextField.center.y
         barIcon.frame.origin.x = searchTextField.frame.origin.x + searchTextField.frame.width*0.975 - barIcon.frame.width
+        barIcon.isUserInteractionEnabled = true
         
         view.addSubview(barIcon)
         

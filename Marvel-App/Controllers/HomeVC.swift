@@ -22,6 +22,10 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var offset : Int = 0
     
+    var isSearch : Bool = true
+    
+    var moreResults : Bool = true
+    
     /* **************************************************************************************************
      **
      **  MARK: View
@@ -32,6 +36,16 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         
         homeView = HomeView(view: view, parent: self)
+        
+        //---------------------------Buttons targets-----------------------------
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(closeAction))
+        
+        self.homeView.barIcon.addGestureRecognizer(tap)
+        
+        homeView.searchTextField.addTarget(self, action: #selector(searchAction), for: .editingDidEnd)
+        
+        
         
         //---------------------------Delegate-----------------------------
         
@@ -131,6 +145,18 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             let cell = LoadMoreCell(view: view)
             
+            cell.loadButton.addTarget(self, action: #selector(loadMore), for: .touchUpInside)
+            
+            if self.moreResults == true {
+                
+                cell.loadButton.setTitle("Carregar mais", for: .normal)
+                
+            } else {
+                
+                cell.loadButton.setTitle("Sem mais resultados", for: .normal)
+                
+            }
+            
             return cell
             
         }
@@ -162,7 +188,107 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if indexPath.row == self.characters.count {
+
+        
+    }
+    
+    /* **************************************************************************************************
+     **
+     **  MARK: Search Action
+     **
+     ****************************************************************************************************/
+    
+    @objc func searchAction() {
+        
+        self.isSearch = false
+        
+        self.offset = 0
+        
+        self.startLoading()
+        
+        self.homeView.barIcon.image = UIImage(named: "close")
+        
+        CharactersAPI.getCharactersByName(offset: self.offset, name: self.homeView.searchTextField.text!) { (response) in
+            
+            self.stopLoading()
+            
+            if response.success {
+                
+                self.characters = response.characters
+                
+                self.offset += response.characters.count
+                
+                self.homeView.tableView.reloadData()
+                
+            } else {
+                
+                print(response.erroMessage)
+                
+            }
+            
+        }
+        
+    }
+    
+    /* **************************************************************************************************
+     **
+     **  MARK: Close Action
+     **
+     ****************************************************************************************************/
+    
+    @objc func closeAction() {
+        
+        if self.isSearch == false {
+            
+            self.isSearch = true
+            
+            self.moreResults = true
+            
+            self.homeView.searchTextField.text = ""
+            
+            self.startLoading()
+            
+            self.homeView.barIcon.image = UIImage(named: "search")
+            
+            self.startLoading()
+            
+            CharactersAPI.getCharacters(offset: 0) { (response) in
+                
+                if response.success {
+                    
+                    self.characters = response.characters
+                    
+                    self.homeView.tableView.reloadData()
+                    
+                    self.stopLoading()
+                    
+                } else {
+                    
+                    print(response.erroMessage)
+                    
+                    self.stopLoading()
+                    
+                }
+                
+            }
+            
+        } else if self.isSearch == true {
+            
+            self.searchAction()
+            
+        }
+     
+    }
+    
+    /* **************************************************************************************************
+     **
+     **  MARK: Load More
+     **
+     ****************************************************************************************************/
+    
+    @objc func loadMore() {
+            
+        if self.isSearch == true {
             
             self.offset += 20
             
@@ -182,10 +308,39 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 
             }
             
+        } else if self.isSearch == false {
+            
+            self.startLoading()
+            
+            CharactersAPI.getCharactersByName(offset: self.offset, name: self.homeView.searchTextField.text!) { (response) in
+                
+                self.stopLoading()
+                
+                if response.success {
+                    
+                    if response.characters.count == 0 || response.characters.count < 20 {
+                        
+                        self.moreResults = false
+                        
+                        self.characters.append(contentsOf: response.characters)
+                        
+                        self.homeView.tableView.reloadData()
+                        
+                    } else {
+                        
+                        self.characters.append(contentsOf: response.characters)
+                        
+                        self.homeView.tableView.reloadData()
+                        
+                    }
+                    
+                }
+                
+            }
+            
         }
         
     }
-    
     
 }
 
