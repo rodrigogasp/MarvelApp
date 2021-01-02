@@ -44,6 +44,8 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        homeView.barIcon.image = UIImage(named: "search")
+        
         self.title = "Characters"
         
         if self.characters.count == 0 {

@@ -16,7 +16,10 @@ class HomeView: UIView {
 
     var searchTextField : UITextField!
     
+    var barIcon : UIImageView!
+    
     var tableView : UITableView!
+    
 
     /* ******************************************************************************
     **
@@ -47,6 +50,16 @@ class HomeView: UIView {
         view.addSubview(searchTextField)
         
         yPosition = yPosition + searchTextField.frame.height + 15
+        
+        //------------------------- Bar icon -----------------------------
+        
+        barIcon = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        barIcon.contentMode = .scaleAspectFit
+        barIcon.clipsToBounds = true
+        barIcon.center.y = searchTextField.center.y
+        barIcon.frame.origin.x = searchTextField.frame.origin.x + searchTextField.frame.width*0.975 - barIcon.frame.width
+        
+        view.addSubview(barIcon)
         
         //-----------------------------Table View-------------------------------------
         
