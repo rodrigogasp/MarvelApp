@@ -20,7 +20,6 @@ class HomeView: UIView {
     
     var tableView : UITableView!
     
-
     /* ******************************************************************************
     **
     **  MARK: Init
@@ -49,8 +48,6 @@ class HomeView: UIView {
         
         view.addSubview(searchTextField)
         
-        yPosition = yPosition + searchTextField.frame.height + 15
-        
         //------------------------- Bar icon -----------------------------
         
         barIcon = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
@@ -61,6 +58,8 @@ class HomeView: UIView {
         barIcon.isUserInteractionEnabled = true
         
         view.addSubview(barIcon)
+        
+        yPosition = yPosition + searchTextField.frame.height + 15
         
         //-----------------------------Table View-------------------------------------
         

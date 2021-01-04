@@ -188,6 +188,13 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let vc = CharacterVC()
+        
+        vc.modalPresentationStyle = .fullScreen
+        
+        vc.character = self.characters[indexPath.row]
+        
+        self.navigationController?.pushViewController(vc, animated: true)
 
         
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043DBB6625A36CC200BEA18F /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBB6525A36CC200BEA18F /* CharacterView.swift */; };
+		043DBB6925A36D2500BEA18F /* CharacterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBB6825A36D2500BEA18F /* CharacterVC.swift */; };
 		046BDFB125A0045800BA3B4C /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BDFB025A0045800BA3B4C /* LoadMoreCell.swift */; };
 		046CFD16259C13A200595FBD /* LoadingPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CFD15259C13A200595FBD /* LoadingPopUp.swift */; };
 		04A83C18259C0B0F0089A8E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A83C17259C0B0F0089A8E5 /* AppDelegate.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		043DBB6525A36CC200BEA18F /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		043DBB6825A36D2500BEA18F /* CharacterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterVC.swift; sourceTree = "<group>"; };
 		046BDFB025A0045800BA3B4C /* LoadMoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
 		046CFD15259C13A200595FBD /* LoadingPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPopUp.swift; sourceTree = "<group>"; };
 		04A83C14259C0B0F0089A8E5 /* Marvel-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +130,7 @@
 				04A83C56259C10C70089A8E5 /* PopUp */,
 				04A83C4A259C0FCF0089A8E5 /* StartView.swift */,
 				04F94519259CED7E0015DBAD /* HomeView.swift */,
+				043DBB6525A36CC200BEA18F /* CharacterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 				04A83C1B259C0B0F0089A8E5 /* HomeVC.swift */,
 				04A83C33259C0C190089A8E5 /* StartVC.swift */,
 				04F94525259CF8510015DBAD /* TabBarController.swift */,
+				043DBB6825A36D2500BEA18F /* CharacterVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -371,12 +377,14 @@
 				04A83C1C259C0B0F0089A8E5 /* HomeVC.swift in Sources */,
 				04A83C18259C0B0F0089A8E5 /* AppDelegate.swift in Sources */,
 				04F94517259CED370015DBAD /* UIColor+Extension.swift in Sources */,
+				043DBB6625A36CC200BEA18F /* CharacterView.swift in Sources */,
 				04F94508259CEC140015DBAD /* Character.swift in Sources */,
 				04FDEB3E25A0F2C30004BA17 /* GenericAlert.swift in Sources */,
 				04F94511259CEC810015DBAD /* DAOThumbnail.swift in Sources */,
 				04A83C4B259C0FCF0089A8E5 /* StartView.swift in Sources */,
 				04F9450E259CEC780015DBAD /* Thumbnail.swift in Sources */,
 				04F9451A259CED7E0015DBAD /* HomeView.swift in Sources */,
+				043DBB6925A36D2500BEA18F /* CharacterVC.swift in Sources */,
 				04F94502259CEBC60015DBAD /* API.swift in Sources */,
 				04F944FF259CEB8C0015DBAD /* ServerResponse.swift in Sources */,
 				04A83C22259C0B0F0089A8E5 /* Marvel_App.xcdatamodeld in Sources */,
