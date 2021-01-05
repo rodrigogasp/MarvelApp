@@ -9,8 +9,10 @@ import UIKit
 
 class Character {
     
+    var id : Int = -1
     var name : String = ""
     var thumbnail : Thumbnail!
+    var description : String = ""   
     
 }
 

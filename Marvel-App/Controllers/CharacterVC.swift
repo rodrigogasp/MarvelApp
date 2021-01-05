@@ -7,6 +7,7 @@
 
 
 import UIKit
+import SDWebImage
 
 class CharacterVC: UIViewController {
     
@@ -56,6 +57,31 @@ class CharacterVC: UIViewController {
         
         characterView.nameLabel.text = self.character.name
         
+        let urlString = "\(self.character.thumbnail.path).\(self.character.thumbnail.type)"
+        
+        
+        let url = URL(string: urlString)
+        
+        if url != nil {
+            
+            characterView.characterImage.sd_setImage(with: url, completed: nil)
+        
+        }
+        
+        if self.character.description == "" {
+            
+            characterView.descriptionContent.text = "No description available"
+            characterView.descriptionContent.sizeToFit()
+            
+        } else {
+            
+            characterView.descriptionContent.text = self.character.description
+            characterView.descriptionContent.sizeToFit()
+            
+        }
+        
+        
+        
     }
     
     /* **************************************************************************************************
@@ -69,6 +95,8 @@ class CharacterVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
         
     }
+    
+
 
     
 }

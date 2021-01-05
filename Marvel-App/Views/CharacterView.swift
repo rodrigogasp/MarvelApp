@@ -22,6 +22,14 @@ class CharacterView: UIView {
     
     var nameLabel : UILabel!
     
+    var characterImage : UIImageView!
+    
+    var descriptionLabel : UILabel!
+    
+    var descriptionContent : UILabel!
+    
+    var comicsLabel : UILabel!
+    
     /* ******************************************************************************
      **
      **  MARK: Init
@@ -34,7 +42,7 @@ class CharacterView: UIView {
         view.backgroundColor = .white
         
         let width = view.frame.size.width
-        let height = view.frame.size.height
+        let height = view.frame.size.height - parent.tabBarController!.tabBar.frame.height
         
         var yPosition = height*0.02
         
@@ -51,7 +59,7 @@ class CharacterView: UIView {
         backButton = UIButton(frame: CGRect(x: width*0.05, y: yPosition, width: 25, height: 25))
         backButton.setImage(UIImage(named: "back"), for: .normal)
         backButton.imageView?.contentMode = .scaleAspectFit
-
+        
         scrollView.addSubview(backButton)
         
         //------------------------- Name-----------------------------
@@ -64,6 +72,46 @@ class CharacterView: UIView {
         nameLabel.center.y = backButton.center.y
         
         scrollView.addSubview(nameLabel)
+        
+        yPosition = yPosition + nameLabel.frame.height
+        
+        //------------------------- Character Image-----------------------------
+        
+        characterImage = UIImageView(frame: CGRect(x: 0, y: yPosition, width: width*0.6, height: width*0.8))
+        characterImage.contentMode = .scaleAspectFit
+        characterImage.clipsToBounds = true
+        characterImage.center.x = width/2
+        characterImage.layer.shadowColor = UIColor.black.cgColor
+        characterImage.layer.shadowOffset = CGSize(width: 0, height: 1)
+        characterImage.layer.shadowOpacity = 0.3
+        characterImage.layer.shadowOffset = CGSize(width: 0, height: 2)
+        
+        scrollView.addSubview(characterImage)
+        
+        yPosition = yPosition + characterImage.frame.height + 20
+        
+        //------------------------- DescriptionLabel-----------------------------
+        
+        descriptionLabel = UILabel(frame: CGRect(x: width*0.05, y: yPosition, width: 0, height: 0))
+        descriptionLabel.text = "Descrição"
+        descriptionLabel.textColor = .goldBack()
+        descriptionLabel.font = UIFont.defaultFont(size: 20, type: .regular)
+        descriptionLabel.sizeToFit()
+        
+        scrollView.addSubview(descriptionLabel)
+        
+        yPosition = yPosition + descriptionLabel.frame.height + 10
+        
+        //------------------------- Description Content-----------------------------
+        
+        descriptionContent = UILabel(frame: CGRect(x: width*0.05, y: yPosition, width: width*0.8, height: 0))
+        descriptionContent.textColor = .white
+        descriptionContent.font = UIFont.defaultFont(size: 18, type: .regular)
+        descriptionContent.numberOfLines = 0
+        descriptionContent.lineBreakMode = .byWordWrapping
+        descriptionContent.textAlignment = .justified
+        
+        scrollView.addSubview(descriptionContent)
         
     }
     

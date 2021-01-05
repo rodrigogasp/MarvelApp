@@ -36,8 +36,16 @@ class DAOCharacter {
         
         let character = Character()
         
+        if let info = JSON["id"] as? Int {
+            character.id = info
+        }
+        
         if let info = JSON["name"] as? String {
             character.name = info
+        }
+        
+        if let info = JSON["description"] as? String {
+            character.description = info
         }
         
         if let info = JSON["thumbnail"] as? [String: AnyObject] {

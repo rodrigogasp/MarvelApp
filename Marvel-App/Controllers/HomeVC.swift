@@ -223,7 +223,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         self.homeView.barIcon.image = UIImage(named: "close")
         
-        CharactersAPI.getCharactersByName(offset: self.offset, name: self.homeView.searchTextField.text!) { (response) in
+        CharactersAPI.getCharactersByName(offset: self.offset, name: self.homeView.searchTextField.text!.replacingOccurrences(of: " ", with: "_")) { (response) in
             
             self.stopLoading()
             
@@ -339,7 +339,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             self.startLoading()
             
-            CharactersAPI.getCharactersByName(offset: self.offset, name: self.homeView.searchTextField.text!) { (response) in
+            CharactersAPI.getCharactersByName(offset: self.offset, name: self.homeView.searchTextField.text!.replacingOccurrences(of: " ", with: "_")) { (response) in
                 
                 self.stopLoading()
                 
