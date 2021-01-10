@@ -30,6 +30,10 @@ class CharacterView: UIView {
     
     var comicsLabel : UILabel!
     
+    var collectionView : UICollectionView!
+    
+    var collectionViewLayout : UICollectionViewFlowLayout!
+    
     /* ******************************************************************************
      **
      **  MARK: Init
@@ -112,6 +116,20 @@ class CharacterView: UIView {
         descriptionContent.textAlignment = .justified
         
         scrollView.addSubview(descriptionContent)
+        
+        //----------------------------- Collection View -----------------------------------
+        
+        collectionViewLayout = UICollectionViewFlowLayout()
+        collectionViewLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        collectionViewLayout.itemSize = CGSize(width: 50, height: 120)
+        collectionViewLayout.scrollDirection = .horizontal
+        
+        collectionView = UICollectionView(frame: CGRect(x: width*0.05, y: 0, width: width*0.9, height: height*0.25), collectionViewLayout: collectionViewLayout)
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = UIColor.clear
+        
+        scrollView.addSubview(collectionView)
         
     }
     

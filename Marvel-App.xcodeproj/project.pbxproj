@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0405FB5325AB59EF00282C1B /* Comics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405FB5225AB59EF00282C1B /* Comics.swift */; };
+		0405FB5625AB5A5700282C1B /* DAOComics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405FB5525AB5A5700282C1B /* DAOComics.swift */; };
 		043DBB6625A36CC200BEA18F /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBB6525A36CC200BEA18F /* CharacterView.swift */; };
 		043DBB6925A36D2500BEA18F /* CharacterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBB6825A36D2500BEA18F /* CharacterVC.swift */; };
 		046BDFB125A0045800BA3B4C /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BDFB025A0045800BA3B4C /* LoadMoreCell.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0405FB5225AB59EF00282C1B /* Comics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comics.swift; sourceTree = "<group>"; };
+		0405FB5525AB5A5700282C1B /* DAOComics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOComics.swift; sourceTree = "<group>"; };
 		043DBB6525A36CC200BEA18F /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 		043DBB6825A36D2500BEA18F /* CharacterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterVC.swift; sourceTree = "<group>"; };
 		046BDFB025A0045800BA3B4C /* LoadMoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 			children = (
 				04F94507259CEC140015DBAD /* Character.swift */,
 				04F9450D259CEC780015DBAD /* Thumbnail.swift */,
+				0405FB5225AB59EF00282C1B /* Comics.swift */,
 			);
 			path = "Models-Class";
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 			children = (
 				04F94504259CEC0A0015DBAD /* DAOCharacter.swift */,
 				04F94510259CEC810015DBAD /* DAOThumbnail.swift */,
+				0405FB5525AB5A5700282C1B /* DAOComics.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -384,10 +390,12 @@
 				04A83C4B259C0FCF0089A8E5 /* StartView.swift in Sources */,
 				04F9450E259CEC780015DBAD /* Thumbnail.swift in Sources */,
 				04F9451A259CED7E0015DBAD /* HomeView.swift in Sources */,
+				0405FB5325AB59EF00282C1B /* Comics.swift in Sources */,
 				043DBB6925A36D2500BEA18F /* CharacterVC.swift in Sources */,
 				04F94502259CEBC60015DBAD /* API.swift in Sources */,
 				04F944FF259CEB8C0015DBAD /* ServerResponse.swift in Sources */,
 				04A83C22259C0B0F0089A8E5 /* Marvel_App.xcdatamodeld in Sources */,
+				0405FB5625AB5A5700282C1B /* DAOComics.swift in Sources */,
 				04F94521259CEE0E0015DBAD /* CardView.swift in Sources */,
 				04F94505259CEC0A0015DBAD /* DAOCharacter.swift in Sources */,
 				04A83C53259C109C0089A8E5 /* Loading.swift in Sources */,

@@ -12,6 +12,7 @@ class ServerResponse {
     var erroMessage : String = ""
     var statusCode : Int = 0
     var characters : [Character] = []
+    var comics : [Comics] = []
     
     init() {
         

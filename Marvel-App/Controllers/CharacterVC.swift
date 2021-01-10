@@ -41,6 +41,21 @@ class CharacterVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        
+        CharactersAPI.getCharactersComics(id: self.character.id) { (response) in
+            
+            if response.success {
+                
+                
+                
+            } else {
+                
+                GenericAlert.genericAlert(self, title: response.erroMessage, message: "", actions: [])
+                
+            }
+            
+        }
         
         setInfo()
 
