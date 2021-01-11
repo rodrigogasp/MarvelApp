@@ -42,11 +42,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let tap = UITapGestureRecognizer(target: self, action: #selector(closeAction))
         
         self.homeView.barIcon.addGestureRecognizer(tap)
-        
-        homeView.searchTextField.addTarget(self, action: #selector(searchAction), for: .editingDidEnd)
-        
-        
-        
+ 
         //---------------------------Delegate-----------------------------
         
         homeView.tableView.delegate = self

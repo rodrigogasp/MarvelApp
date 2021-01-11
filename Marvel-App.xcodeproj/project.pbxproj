@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0402ACD225ABF7880044BEC7 /* CharacterComicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402ACD125ABF7880044BEC7 /* CharacterComicsCell.swift */; };
 		0405FB5325AB59EF00282C1B /* Comics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405FB5225AB59EF00282C1B /* Comics.swift */; };
 		0405FB5625AB5A5700282C1B /* DAOComics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405FB5525AB5A5700282C1B /* DAOComics.swift */; };
 		043DBB6625A36CC200BEA18F /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBB6525A36CC200BEA18F /* CharacterView.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0402ACD125ABF7880044BEC7 /* CharacterComicsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterComicsCell.swift; sourceTree = "<group>"; };
 		0405FB5225AB59EF00282C1B /* Comics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comics.swift; sourceTree = "<group>"; };
 		0405FB5525AB5A5700282C1B /* DAOComics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOComics.swift; sourceTree = "<group>"; };
 		043DBB6525A36CC200BEA18F /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			children = (
 				04F9451D259CEDC60015DBAD /* CharactersCell.swift */,
 				046BDFB025A0045800BA3B4C /* LoadMoreCell.swift */,
+				0402ACD125ABF7880044BEC7 /* CharacterComicsCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				04FDEB3E25A0F2C30004BA17 /* GenericAlert.swift in Sources */,
 				04F94511259CEC810015DBAD /* DAOThumbnail.swift in Sources */,
 				04A83C4B259C0FCF0089A8E5 /* StartView.swift in Sources */,
+				0402ACD225ABF7880044BEC7 /* CharacterComicsCell.swift in Sources */,
 				04F9450E259CEC780015DBAD /* Thumbnail.swift in Sources */,
 				04F9451A259CED7E0015DBAD /* HomeView.swift in Sources */,
 				0405FB5325AB59EF00282C1B /* Comics.swift in Sources */,

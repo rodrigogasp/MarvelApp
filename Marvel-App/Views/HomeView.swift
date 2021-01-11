@@ -40,7 +40,7 @@ class HomeView: UIView {
         
         searchTextField = UITextField(frame: CGRect(x: 0, y: yPosition, width: width*0.8, height: 30))
         searchTextField.backgroundColor = .white
-        searchTextField.placeholder = "Buscar por nome"
+        searchTextField.placeholder = "Search by name"
         searchTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 30))
         searchTextField.leftViewMode = .always
         searchTextField.center.x = width/2

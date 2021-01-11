@@ -30,6 +30,8 @@ class CharacterView: UIView {
     
     var comicsLabel : UILabel!
     
+    var seeMoreButton : UIButton!
+    
     var collectionView : UICollectionView!
     
     var collectionViewLayout : UICollectionViewFlowLayout!
@@ -97,7 +99,7 @@ class CharacterView: UIView {
         //------------------------- DescriptionLabel-----------------------------
         
         descriptionLabel = UILabel(frame: CGRect(x: width*0.05, y: yPosition, width: 0, height: 0))
-        descriptionLabel.text = "Descrição"
+        descriptionLabel.text = "Description"
         descriptionLabel.textColor = .goldBack()
         descriptionLabel.font = UIFont.defaultFont(size: 20, type: .regular)
         descriptionLabel.sizeToFit()
@@ -117,19 +119,42 @@ class CharacterView: UIView {
         
         scrollView.addSubview(descriptionContent)
         
+        //------------------------- Comics Label -----------------------------
+        
+        comicsLabel = UILabel(frame: CGRect(x: width*0.05, y: 0, width: 0, height: 0))
+        comicsLabel.text = "Comics"
+        comicsLabel.textColor = .goldBack()
+        comicsLabel.textColor = .goldBack()
+        comicsLabel.font = UIFont.defaultFont(size: 20, type: .regular)
+        comicsLabel.sizeToFit()
+        
+        scrollView.addSubview(comicsLabel)
+        
+        //------------------------- See more button -----------------------------
+        
+        seeMoreButton = UIButton(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        seeMoreButton.setTitle("See more", for: .normal)
+        seeMoreButton.setTitleColor(.goldBack(), for: .normal)
+        seeMoreButton.titleLabel?.font = UIFont.defaultFont(size: 20, type: .regular)
+        seeMoreButton.sizeToFit()
+        seeMoreButton.frame.origin.x = width*0.9 - seeMoreButton.frame.width
+        
+        scrollView.addSubview(seeMoreButton)
+        
         //----------------------------- Collection View -----------------------------------
         
         collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        collectionViewLayout.itemSize = CGSize(width: 50, height: 120)
+        collectionViewLayout.itemSize = CGSize(width: 120, height: 200)
         collectionViewLayout.scrollDirection = .horizontal
         
-        collectionView = UICollectionView(frame: CGRect(x: width*0.05, y: 0, width: width*0.9, height: height*0.25), collectionViewLayout: collectionViewLayout)
+        collectionView = UICollectionView(frame: CGRect(x: width*0.05, y: 0, width: width*0.9, height: 200), collectionViewLayout: collectionViewLayout)
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = UIColor.clear
         
         scrollView.addSubview(collectionView)
+        
         
     }
     
