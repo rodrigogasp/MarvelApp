@@ -105,7 +105,7 @@ class CharacterVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         
         }
         
-        if self.character.description == "" {
+        if self.character.description == "" || self.character.description.isEmpty {
             
             characterView.descriptionContent.text = "No description available"
             characterView.descriptionContent.sizeToFit()
