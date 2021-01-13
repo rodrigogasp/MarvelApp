@@ -21,6 +21,10 @@ extension UIColor{
         return UIColor(hex: 0xa46628)
     }
     
+    static func buttonsColor() -> UIColor {
+        return UIColor(hex: 0x191970)
+    }
+    
     convenience init(red: Int, green: Int, blue: Int) {
         assert(red >= 0 && red <= 255, "Invalid red component")
         assert(green >= 0 && green <= 255, "Invalid green component")

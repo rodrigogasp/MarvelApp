@@ -54,6 +54,8 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.parent?.tabBarController!.tabBar.barTintColor = UIColor.marvelBack()
+        
         homeView.barIcon.image = UIImage(named: "search")
         
         self.title = "Characters"

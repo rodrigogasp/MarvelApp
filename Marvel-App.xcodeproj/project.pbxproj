@@ -38,6 +38,8 @@
 		04F9451E259CEDC60015DBAD /* CharactersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9451D259CEDC60015DBAD /* CharactersCell.swift */; };
 		04F94521259CEE0E0015DBAD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F94520259CEE0E0015DBAD /* CardView.swift */; };
 		04F94526259CF8510015DBAD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F94525259CF8510015DBAD /* TabBarController.swift */; };
+		04FCAE9125AE813900A8894F /* BattleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCAE9025AE813900A8894F /* BattleVC.swift */; };
+		04FCAE9525AE81B000A8894F /* BattleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCAE9425AE81B000A8894F /* BattleView.swift */; };
 		04FDEB3E25A0F2C30004BA17 /* GenericAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDEB3D25A0F2C30004BA17 /* GenericAlert.swift */; };
 		5C0159091107958DD7506E2D /* Pods_Marvel_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E31CC4A2B6E7E84DEEC3BB /* Pods_Marvel_App.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +78,8 @@
 		04F9451D259CEDC60015DBAD /* CharactersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCell.swift; sourceTree = "<group>"; };
 		04F94520259CEE0E0015DBAD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		04F94525259CF8510015DBAD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		04FCAE9025AE813900A8894F /* BattleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleVC.swift; sourceTree = "<group>"; };
+		04FCAE9425AE81B000A8894F /* BattleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleView.swift; sourceTree = "<group>"; };
 		04FDEB3D25A0F2C30004BA17 /* GenericAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericAlert.swift; sourceTree = "<group>"; };
 		4C27472FD00A53453FC7EA86 /* Pods-Marvel-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel-App.release.xcconfig"; path = "Target Support Files/Pods-Marvel-App/Pods-Marvel-App.release.xcconfig"; sourceTree = "<group>"; };
 		5E58315D3962DFA98123AF27 /* Pods-Marvel-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel-App.debug.xcconfig"; path = "Target Support Files/Pods-Marvel-App/Pods-Marvel-App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,11 +136,11 @@
 		04A83C2F259C0BCB0089A8E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				04A83C31259C0BDC0089A8E5 /* StoryBoards */,
 				04A83C56259C10C70089A8E5 /* PopUp */,
+				04FCAE9325AE819500A8894F /* TabBar */,
 				04A83C4A259C0FCF0089A8E5 /* StartView.swift */,
-				04F94519259CED7E0015DBAD /* HomeView.swift */,
 				043DBB6525A36CC200BEA18F /* CharacterView.swift */,
+				04A83C31259C0BDC0089A8E5 /* StoryBoards */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -144,9 +148,8 @@
 		04A83C30259C0BD20089A8E5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				04A83C1B259C0B0F0089A8E5 /* HomeVC.swift */,
+				04FCAE8F25AE810C00A8894F /* TabBar */,
 				04A83C33259C0C190089A8E5 /* StartVC.swift */,
-				04F94525259CF8510015DBAD /* TabBarController.swift */,
 				043DBB6825A36D2500BEA18F /* CharacterVC.swift */,
 			);
 			path = Controllers;
@@ -246,6 +249,25 @@
 				0402ACD125ABF7880044BEC7 /* CharacterComicsCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		04FCAE8F25AE810C00A8894F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				04F94525259CF8510015DBAD /* TabBarController.swift */,
+				04A83C1B259C0B0F0089A8E5 /* HomeVC.swift */,
+				04FCAE9025AE813900A8894F /* BattleVC.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		04FCAE9325AE819500A8894F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				04F94519259CED7E0015DBAD /* HomeView.swift */,
+				04FCAE9425AE81B000A8894F /* BattleView.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		4E6C4B2B40CDE890558A0CA8 /* Pods */ = {
@@ -386,6 +408,7 @@
 				04A83C1C259C0B0F0089A8E5 /* HomeVC.swift in Sources */,
 				04A83C18259C0B0F0089A8E5 /* AppDelegate.swift in Sources */,
 				04F94517259CED370015DBAD /* UIColor+Extension.swift in Sources */,
+				04FCAE9125AE813900A8894F /* BattleVC.swift in Sources */,
 				043DBB6625A36CC200BEA18F /* CharacterView.swift in Sources */,
 				04F94508259CEC140015DBAD /* Character.swift in Sources */,
 				04FDEB3E25A0F2C30004BA17 /* GenericAlert.swift in Sources */,
@@ -401,6 +424,7 @@
 				04A83C22259C0B0F0089A8E5 /* Marvel_App.xcdatamodeld in Sources */,
 				0405FB5625AB5A5700282C1B /* DAOComics.swift in Sources */,
 				04F94521259CEE0E0015DBAD /* CardView.swift in Sources */,
+				04FCAE9525AE81B000A8894F /* BattleView.swift in Sources */,
 				04F94505259CEC0A0015DBAD /* DAOCharacter.swift in Sources */,
 				04A83C53259C109C0089A8E5 /* Loading.swift in Sources */,
 				04A83C1A259C0B0F0089A8E5 /* SceneDelegate.swift in Sources */,

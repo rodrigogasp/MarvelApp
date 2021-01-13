@@ -56,8 +56,14 @@ class TabBarController : UITabBarController {
         homeController.isNavigationBarHidden = true
         homeController.tabBarItem.image = UIImage(named:"spiderman")
         homeController.tabBarItem.selectedImage = UIImage(named: "spiderman")?.withTintColor(UIColor.goldBack())
+        
+        let battleController = UINavigationController(rootViewController: BattleVC())
+        battleController.isNavigationBarHidden = true
+        battleController.tabBarItem.image = UIImage(named:"battle")
+        battleController.tabBarItem.selectedImage = UIImage(named: "battle")?.withTintColor(UIColor.goldBack())
+        battleController.tabBarItem.title = "Battles"
   
-        viewControllers = [homeController]
+        viewControllers = [homeController, battleController]
         
     }
     
