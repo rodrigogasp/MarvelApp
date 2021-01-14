@@ -51,6 +51,8 @@ class CharacterVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        print("ID AQUI \(self.character.id)")
 
         self.startLoading()
         

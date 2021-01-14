@@ -25,6 +25,8 @@
 		04A83C4B259C0FCF0089A8E5 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A83C4A259C0FCF0089A8E5 /* StartView.swift */; };
 		04A83C4F259C10660089A8E5 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04A83C4E259C10660089A8E5 /* loading.gif */; };
 		04A83C53259C109C0089A8E5 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A83C52259C109C0089A8E5 /* Loading.swift */; };
+		04F6265425AFE83400EE36E2 /* DuelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6265325AFE83400EE36E2 /* DuelsView.swift */; };
+		04F6265725AFE85200EE36E2 /* DuelsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6265625AFE85200EE36E2 /* DuelsVC.swift */; };
 		04F944FF259CEB8C0015DBAD /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F944FE259CEB8C0015DBAD /* ServerResponse.swift */; };
 		04F94502259CEBC60015DBAD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F94501259CEBC60015DBAD /* API.swift */; };
 		04F94505259CEC0A0015DBAD /* DAOCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F94504259CEC0A0015DBAD /* DAOCharacter.swift */; };
@@ -65,6 +67,8 @@
 		04A83C4A259C0FCF0089A8E5 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		04A83C4E259C10660089A8E5 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		04A83C52259C109C0089A8E5 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		04F6265325AFE83400EE36E2 /* DuelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelsView.swift; sourceTree = "<group>"; };
+		04F6265625AFE85200EE36E2 /* DuelsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelsVC.swift; sourceTree = "<group>"; };
 		04F944FE259CEB8C0015DBAD /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		04F94501259CEBC60015DBAD /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		04F94504259CEC0A0015DBAD /* DAOCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOCharacter.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 				04FCAE9325AE819500A8894F /* TabBar */,
 				04A83C4A259C0FCF0089A8E5 /* StartView.swift */,
 				043DBB6525A36CC200BEA18F /* CharacterView.swift */,
+				04F6265325AFE83400EE36E2 /* DuelsView.swift */,
 				04A83C31259C0BDC0089A8E5 /* StoryBoards */,
 			);
 			path = Views;
@@ -151,6 +156,7 @@
 				04FCAE8F25AE810C00A8894F /* TabBar */,
 				04A83C33259C0C190089A8E5 /* StartVC.swift */,
 				043DBB6825A36D2500BEA18F /* CharacterVC.swift */,
+				04F6265625AFE85200EE36E2 /* DuelsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -419,6 +425,7 @@
 				04F9451A259CED7E0015DBAD /* HomeView.swift in Sources */,
 				0405FB5325AB59EF00282C1B /* Comics.swift in Sources */,
 				043DBB6925A36D2500BEA18F /* CharacterVC.swift in Sources */,
+				04F6265425AFE83400EE36E2 /* DuelsView.swift in Sources */,
 				04F94502259CEBC60015DBAD /* API.swift in Sources */,
 				04F944FF259CEB8C0015DBAD /* ServerResponse.swift in Sources */,
 				04A83C22259C0B0F0089A8E5 /* Marvel_App.xcdatamodeld in Sources */,
@@ -431,6 +438,7 @@
 				04F94526259CF8510015DBAD /* TabBarController.swift in Sources */,
 				04F94514259CED020015DBAD /* UIFont+Extension.swift in Sources */,
 				046BDFB125A0045800BA3B4C /* LoadMoreCell.swift in Sources */,
+				04F6265725AFE85200EE36E2 /* DuelsVC.swift in Sources */,
 				046CFD16259C13A200595FBD /* LoadingPopUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

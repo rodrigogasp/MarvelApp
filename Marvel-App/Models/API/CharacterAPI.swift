@@ -208,6 +208,71 @@ class CharactersAPI {
         })
         
     }
+    
+    /* *********************************************************************************
+     **
+     **  MARK: Get Characters By id
+     **
+     ***********************************************************************************/
+    
+    static func getCharactersById(id: Int, callback: @escaping (ServerResponse) -> Void) {
+        
+        let newURL = API.host + API.characters + "/\(id)" + "?ts=\(API.sharedInstance.ts)&" + "apikey=\(API.sharedInstance.publicKey)&hash=\(API.sharedInstance.hash)"
+        
+        
+        print("request - getCharactersById")
+        print(newURL)
+        
+        API.sharedInstance.sessionManager.request(newURL,
+                                                  method: HTTPMethod.get,
+                                                  parameters: nil,
+                                                  encoding: JSONEncoding.default,
+                                                  headers: nil
+        ).responseJSON(completionHandler: { response in
+            
+            let resposta = ServerResponse()
+            
+            print("response - getCharactersById")
+            print(response.result)
+            
+            switch response.result {
+            
+            case let .success(value):
+                resposta.statusCode = response.response?.statusCode ?? 0
+                
+                let JSON = value as AnyObject
+                
+                if let JSONArray = JSON["data"] as? [String : AnyObject] {
+                    
+                    if let results = JSONArray["results"] as? [[String : Any]] {
+                        
+                        resposta.character = DAOCharacter.transformJSONInCharacter(results[0] as AnyObject)
+                        
+                        resposta.success = true
+                        
+                        callback(resposta)
+                        
+                        return
+                        
+                    }
+    
+                    
+                }
+                
+                
+            case let .failure(error):
+                print(error)
+                
+            }
+            
+            resposta.success = false
+            resposta.erroMessage = "Error loading character"
+            
+            callback(resposta)
+            
+        })
+        
+    }
 
     
 }

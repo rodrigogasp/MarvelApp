@@ -13,6 +13,7 @@ class ServerResponse {
     var statusCode : Int = 0
     var characters : [Character] = []
     var comics : [Comics] = []
+    var character : Character!
     
     init() {
         

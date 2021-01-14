@@ -30,6 +30,8 @@ class BattleVC: UIViewController  {
         
         battleView = BattleView(view: view, parent: self)
         
+        battleView.battleButton.addTarget(self, action: #selector(duelsAction), for: .touchUpInside)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,6 +86,14 @@ class BattleVC: UIViewController  {
     @objc func backAction() {
         
         self.navigationController?.popViewController(animated: true)
+        
+    }
+    
+    @objc func duelsAction() {
+        
+        let vc = DuelsVC()
+        
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
