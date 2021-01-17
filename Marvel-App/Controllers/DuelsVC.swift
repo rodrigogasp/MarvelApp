@@ -41,7 +41,9 @@ class DuelsVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        while self.fightersArray.count < 16 {
+        self.parent?.tabBarController!.tabBar.barTintColor = UIColor.marvelBack()
+        
+        while self.fightersArray.count < 8 {
             
             let random = Int.random(in: 0...33)
             
