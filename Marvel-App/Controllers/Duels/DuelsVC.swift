@@ -34,6 +34,8 @@ class DuelsVC: UIViewController {
         super.viewDidLoad()
         
         duelsView = DuelsView(view: view, parent: self)
+        
+        duelsView.backButton.addTarget(self, action: #selector(backAction), for: .touchUpInside)
     
         
     }
@@ -70,6 +72,18 @@ class DuelsVC: UIViewController {
             }
             
         }
+        
+    }
+    
+    /* **************************************************************************************************
+     **
+     **  MARK: Back Action
+     **
+     ****************************************************************************************************/
+    
+    @objc func backAction() {
+        
+        self.navigationController?.popViewController(animated: true)
         
     }
 

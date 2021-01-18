@@ -23,6 +23,8 @@ class DuelsView: UIView {
     
     var rulesContentLabel : UILabel!
     
+    var backButton : UIButton!
+    
     /* ******************************************************************************
      **
      **  MARK: Init
@@ -46,6 +48,14 @@ class DuelsView: UIView {
         scrollView.backgroundColor = .marvelBack()
         
         view.addSubview(scrollView)
+        
+        //------------------------- Back Button -----------------------------
+        
+        backButton = UIButton(frame: CGRect(x: width*0.05, y: height*0.02, width: 25, height: 25))
+        backButton.setImage(UIImage(named: "back"), for: .normal)
+        backButton.imageView?.contentMode = .scaleAspectFit
+        
+        scrollView.addSubview(backButton)
         
         //------------------------- Rules Label -----------------------------
         
@@ -73,7 +83,7 @@ class DuelsView: UIView {
         
         scrollView.addSubview(rulesContentLabel)
         
-        yPosition = yPosition + rulesContentLabel.frame.height + 40
+        yPosition = yPosition + rulesContentLabel.frame.height + 60
         
         //------------------------- Start Button ---------------------------------------
         
@@ -83,6 +93,7 @@ class DuelsView: UIView {
         startButton.backgroundColor = .goldBack()
         startButton.layer.cornerRadius = startButton.frame.height/2
         startButton.center.x = width/2
+        startButton.titleLabel?.font = UIFont.defaultFont(size: 24, type: .medium)
         
         scrollView.addSubview(startButton)
         

@@ -102,6 +102,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040E40FC25B52E1200D8611F /* Duels */ = {
+			isa = PBXGroup;
+			children = (
+				04F6265325AFE83400EE36E2 /* DuelsView.swift */,
+			);
+			path = Duels;
+			sourceTree = "<group>";
+		};
+		040E40FD25B52E2000D8611F /* Duels */ = {
+			isa = PBXGroup;
+			children = (
+				04F6265625AFE85200EE36E2 /* DuelsVC.swift */,
+			);
+			path = Duels;
+			sourceTree = "<group>";
+		};
 		04A83C0B259C0B0F0089A8E5 = {
 			isa = PBXGroup;
 			children = (
@@ -142,10 +158,10 @@
 			children = (
 				04A83C56259C10C70089A8E5 /* PopUp */,
 				04FCAE9325AE819500A8894F /* TabBar */,
+				040E40FC25B52E1200D8611F /* Duels */,
+				04A83C31259C0BDC0089A8E5 /* StoryBoards */,
 				04A83C4A259C0FCF0089A8E5 /* StartView.swift */,
 				043DBB6525A36CC200BEA18F /* CharacterView.swift */,
-				04F6265325AFE83400EE36E2 /* DuelsView.swift */,
-				04A83C31259C0BDC0089A8E5 /* StoryBoards */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,9 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				04FCAE8F25AE810C00A8894F /* TabBar */,
+				040E40FD25B52E2000D8611F /* Duels */,
 				04A83C33259C0C190089A8E5 /* StartVC.swift */,
 				043DBB6825A36D2500BEA18F /* CharacterVC.swift */,
-				04F6265625AFE85200EE36E2 /* DuelsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
