@@ -12,6 +12,8 @@
 		0405FB5625AB5A5700282C1B /* DAOComics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405FB5525AB5A5700282C1B /* DAOComics.swift */; };
 		043DBB6625A36CC200BEA18F /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBB6525A36CC200BEA18F /* CharacterView.swift */; };
 		043DBB6925A36D2500BEA18F /* CharacterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBB6825A36D2500BEA18F /* CharacterVC.swift */; };
+		045D125B25B7A88E00C7526E /* Round1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D125A25B7A88E00C7526E /* Round1View.swift */; };
+		045D125E25B7AD9000C7526E /* Round1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D125D25B7AD9000C7526E /* Round1VC.swift */; };
 		046BDFB125A0045800BA3B4C /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BDFB025A0045800BA3B4C /* LoadMoreCell.swift */; };
 		046CFD16259C13A200595FBD /* LoadingPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CFD15259C13A200595FBD /* LoadingPopUp.swift */; };
 		04A83C18259C0B0F0089A8E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A83C17259C0B0F0089A8E5 /* AppDelegate.swift */; };
@@ -52,6 +54,8 @@
 		0405FB5525AB5A5700282C1B /* DAOComics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOComics.swift; sourceTree = "<group>"; };
 		043DBB6525A36CC200BEA18F /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 		043DBB6825A36D2500BEA18F /* CharacterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterVC.swift; sourceTree = "<group>"; };
+		045D125A25B7A88E00C7526E /* Round1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round1View.swift; sourceTree = "<group>"; };
+		045D125D25B7AD9000C7526E /* Round1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round1VC.swift; sourceTree = "<group>"; };
 		046BDFB025A0045800BA3B4C /* LoadMoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
 		046CFD15259C13A200595FBD /* LoadingPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPopUp.swift; sourceTree = "<group>"; };
 		04A83C14259C0B0F0089A8E5 /* Marvel-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				04F6265325AFE83400EE36E2 /* DuelsView.swift */,
+				045D125A25B7A88E00C7526E /* Round1View.swift */,
 			);
 			path = Duels;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				04F6265625AFE85200EE36E2 /* DuelsVC.swift */,
+				045D125D25B7AD9000C7526E /* Round1VC.swift */,
 			);
 			path = Duels;
 			sourceTree = "<group>";
@@ -431,6 +437,7 @@
 				04A83C18259C0B0F0089A8E5 /* AppDelegate.swift in Sources */,
 				04F94517259CED370015DBAD /* UIColor+Extension.swift in Sources */,
 				04FCAE9125AE813900A8894F /* BattleVC.swift in Sources */,
+				045D125B25B7A88E00C7526E /* Round1View.swift in Sources */,
 				043DBB6625A36CC200BEA18F /* CharacterView.swift in Sources */,
 				04F94508259CEC140015DBAD /* Character.swift in Sources */,
 				04FDEB3E25A0F2C30004BA17 /* GenericAlert.swift in Sources */,
@@ -444,6 +451,7 @@
 				04F6265425AFE83400EE36E2 /* DuelsView.swift in Sources */,
 				04F94502259CEBC60015DBAD /* API.swift in Sources */,
 				04F944FF259CEB8C0015DBAD /* ServerResponse.swift in Sources */,
+				045D125E25B7AD9000C7526E /* Round1VC.swift in Sources */,
 				04A83C22259C0B0F0089A8E5 /* Marvel_App.xcdatamodeld in Sources */,
 				0405FB5625AB5A5700282C1B /* DAOComics.swift in Sources */,
 				04F94521259CEE0E0015DBAD /* CardView.swift in Sources */,

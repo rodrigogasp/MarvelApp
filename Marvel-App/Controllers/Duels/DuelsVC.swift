@@ -36,6 +36,8 @@ class DuelsVC: UIViewController {
         duelsView = DuelsView(view: view, parent: self)
         
         duelsView.backButton.addTarget(self, action: #selector(backAction), for: .touchUpInside)
+        
+        duelsView.startButton.addTarget(self, action: #selector(startAction), for: .touchUpInside)
     
         
     }
@@ -86,7 +88,22 @@ class DuelsVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
         
     }
+    
+    /* **************************************************************************************************
+     **
+     **  MARK: Start Action
+     **
+     ****************************************************************************************************/
 
+    @objc func startAction() {
+        
+        let vc = Round1VC()
+        
+        vc.fighters = self.namesArray
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
     
 }
 
