@@ -51,7 +51,7 @@ class DuelsVC: UIViewController {
             
             let random = Int.random(in: 0...33)
             
-            if !self.fightersArray.contains(random) {
+            if !self.fightersArray.contains(charactersArray[random]) {
                 
                 fightersArray.append(charactersArray[random])
                 
