@@ -1,14 +1,14 @@
 //
-//  Round1View.swift
+//  Round2View.swift
 //  Marvel-App
 //
-//  Created by Rodrigo Gaspar on 19/01/21.
+//  Created by Rodrigo Gaspar on 28/01/21.
 //
 
 
 import UIKit
 
-class Round1View: UIView {
+class Round2View: UIView {
     
     /* ********************************************************************************
      **
@@ -40,44 +40,13 @@ class Round1View: UIView {
     var fighter4Button : UIButton!
     var fighter4View : UIView!
     
-    var fighter5ImageView : UIImageView!
-    var fighter5Label : UILabel!
-    var fighter5Button : UIButton!
-    var fighter5View : UIView!
-    
-    var fighter6ImageView : UIImageView!
-    var fighter6Label : UILabel!
-    var fighter6Button : UIButton!
-    var fighter6View : UIView!
-    
-    var fighter7ImageView : UIImageView!
-    var fighter7Label : UILabel!
-    var fighter7Button : UIButton!
-    var fighter7View : UIView!
-    
-    var fighter8ImageView : UIImageView!
-    var fighter8Label : UILabel!
-    var fighter8Button : UIButton!
-    var fighter8View : UIView!
-    
-    var duel1Button : UIButton!
-    var duel2Button : UIButton!
-    var duel3Button : UIButton!
-    var duel4Button : UIButton!
-    
     var versus1ImageView : UIImageView!
     var versus2ImageView : UIImageView!
-    var versus3ImageView : UIImageView!
-    var versus4ImageView : UIImageView!
     
     var winner1ImageView : UIImageView!
     var winner2ImageView : UIImageView!
     var winner3ImageView : UIImageView!
     var winner4ImageView : UIImageView!
-    var winner5ImageView : UIImageView!
-    var winner6ImageView : UIImageView!
-    var winner7ImageView : UIImageView!
-    var winner8ImageView : UIImageView!
     
     var nextButton : UIButton!
     /* ******************************************************************************
@@ -312,204 +281,6 @@ class Round1View: UIView {
         
         yPosition = yPosition + fighter4Button.frame.height + 50
         
-        //------------------------- Fight 3 -----------------------------
-        
-        fighter5ImageView = UIImageView(frame: CGRect(x: width*0.05, y: yPosition, width: width*0.45, height: 150))
-        fighter5ImageView.contentMode = .scaleAspectFill
-        fighter5ImageView.layer.cornerRadius = fighter5ImageView.frame.height/2
-        fighter5ImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-        
-        scrollView.addSubview(fighter5ImageView)
-        
-        winner5ImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
-        winner5ImageView.image = UIImage(named: "winner")
-        winner5ImageView.contentMode = .scaleAspectFit
-        winner5ImageView.frame.origin.x = fighter5ImageView.frame.origin.x + fighter5ImageView.frame.width - winner5ImageView.frame.width - 10
-        winner5ImageView.isHidden = true
-        winner5ImageView.alpha = 0
-        winner5ImageView.frame.origin.y = fighter5ImageView.frame.origin.y + 5
-        
-        scrollView.addSubview(winner5ImageView)
-        
-        fighter5View = UIView(frame: CGRect(x: width*0.05, y: 0, width: width*0.45, height: 50))
-        fighter5View.backgroundColor = .goldBack()
-        fighter5View.layer.cornerRadius = 12
-        fighter5View.layer.maskedCorners = [.layerMinXMaxYCorner]
-        fighter5View.frame.origin.y = yPosition + fighter5ImageView.frame.height
-        
-        scrollView.addSubview(fighter5View)
-        
-        fighter5Label = UILabel(frame: CGRect(x: 0, y: 0, width: width*0.4, height: 45))
-        fighter5Label.textColor = .black
-        fighter5Label.font = UIFont.defaultFont(size: 16, type: .regular)
-        fighter5Label.numberOfLines = 0
-        fighter5Label.lineBreakMode = .byWordWrapping
-        fighter5Label.textAlignment = .center
-        fighter5Label.center.x = fighter5View.center.x
-        fighter5Label.center.y = fighter5View.center.y
-        
-        scrollView.addSubview(fighter5Label)
-        
-        fighter5Button = UIButton(frame: CGRect(x: width*0.05, y: yPosition, width: width*0.45, height: 200))
-        fighter5Button.backgroundColor = .clear
-        fighter5Button.layer.cornerRadius = 12
-        fighter5Button.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-        fighter5Button.frame.origin.y = fighter5ImageView.frame.origin.y
-        
-        scrollView.addSubview(fighter5Button)
-        
-        fighter6ImageView = UIImageView(frame: CGRect(x: width*0.5, y: yPosition, width: width*0.45, height: 150))
-        fighter6ImageView.contentMode = .scaleAspectFill
-        fighter6ImageView.layer.cornerRadius = fighter6ImageView.frame.height/2
-        fighter6ImageView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner]
-        
-        scrollView.addSubview(fighter6ImageView)
-        
-        winner6ImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
-        winner6ImageView.image = UIImage(named: "winner")
-        winner6ImageView.contentMode = .scaleAspectFit
-        winner6ImageView.frame.origin.x = fighter6ImageView.frame.origin.x + fighter6ImageView.frame.width - winner6ImageView.frame.width - 10
-        winner6ImageView.isHidden = true
-        winner6ImageView.alpha = 0
-        winner6ImageView.frame.origin.y = fighter6ImageView.frame.origin.y + 5
-        
-        scrollView.addSubview(winner6ImageView)
-        
-        fighter6View = UIView(frame: CGRect(x: width*0.5, y: 0, width: width*0.45, height: 50))
-        fighter6View.backgroundColor = .goldBack()
-        fighter6View.layer.cornerRadius = 12
-        fighter6View.layer.maskedCorners = [.layerMaxXMaxYCorner]
-        fighter6View.frame.origin.y = yPosition + fighter6ImageView.frame.height
-        
-        scrollView.addSubview(fighter6View)
-        
-        fighter6Label = UILabel(frame: CGRect(x: 0, y: 0, width: width*0.4, height: 45))
-        fighter6Label.textColor = .black
-        fighter6Label.font = UIFont.defaultFont(size: 16, type: .regular)
-        fighter6Label.numberOfLines = 0
-        fighter6Label.lineBreakMode = .byWordWrapping
-        fighter6Label.textAlignment = .center
-        fighter6Label.center.x = fighter6View.center.x
-        fighter6Label.center.y = fighter6View.center.y
-        
-        scrollView.addSubview(fighter6Label)
-        
-        fighter6Button = UIButton(frame: CGRect(x: width*0.5, y: yPosition, width: width*0.45, height: 200))
-        fighter6Button.backgroundColor = .clear
-        fighter6Button.layer.cornerRadius = 12
-        fighter6Button.layer.maskedCorners = [.layerMaxXMaxYCorner]
-        fighter6Button.frame.origin.y = fighter6ImageView.frame.origin.y
-        
-        scrollView.addSubview(fighter6Button)
-        
-        versus3ImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        versus3ImageView.image = UIImage(named: "versus")
-        versus3ImageView.contentMode = .scaleAspectFit
-        versus3ImageView.center.x = width/2
-        versus3ImageView.center.y = fighter5ImageView.center.y
-        
-        scrollView.addSubview(versus3ImageView)
-        
-        yPosition = yPosition + fighter6Button.frame.height + 50
-        
-        //------------------------- Fight 4 -----------------------------
-        
-        fighter7ImageView = UIImageView(frame: CGRect(x: width*0.05, y: yPosition, width: width*0.45, height: 150))
-        fighter7ImageView.contentMode = .scaleAspectFill
-        fighter7ImageView.layer.cornerRadius = fighter7ImageView.frame.height/2
-        fighter7ImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-        
-        scrollView.addSubview(fighter7ImageView)
-        
-        winner7ImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
-        winner7ImageView.image = UIImage(named: "winner")
-        winner7ImageView.contentMode = .scaleAspectFit
-        winner7ImageView.frame.origin.x = fighter7ImageView.frame.origin.x + fighter7ImageView.frame.width - winner7ImageView.frame.width - 10
-        winner7ImageView.isHidden = true
-        winner7ImageView.alpha = 0
-        winner7ImageView.frame.origin.y = fighter7ImageView.frame.origin.y + 5
-        
-        scrollView.addSubview(winner7ImageView)
-        
-        fighter7View = UIView(frame: CGRect(x: width*0.05, y: 0, width: width*0.45, height: 50))
-        fighter7View.backgroundColor = .goldBack()
-        fighter7View.layer.cornerRadius = 12
-        fighter7View.layer.maskedCorners = [.layerMinXMaxYCorner]
-        fighter7View.frame.origin.y = yPosition + fighter7ImageView.frame.height
-        
-        scrollView.addSubview(fighter7View)
-        
-        fighter7Label = UILabel(frame: CGRect(x: 0, y: 0, width: width*0.4, height: 45))
-        fighter7Label.textColor = .black
-        fighter7Label.font = UIFont.defaultFont(size: 16, type: .regular)
-        fighter7Label.numberOfLines = 0
-        fighter7Label.lineBreakMode = .byWordWrapping
-        fighter7Label.textAlignment = .center
-        fighter7Label.center.x = fighter7View.center.x
-        fighter7Label.center.y = fighter7View.center.y
-        
-        scrollView.addSubview(fighter7Label)
-        
-        fighter7Button = UIButton(frame: CGRect(x: width*0.05, y: yPosition, width: width*0.45, height: 200))
-        fighter7Button.backgroundColor = .clear
-        fighter7Button.layer.cornerRadius = 12
-        fighter7Button.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-        fighter7Button.frame.origin.y = fighter7ImageView.frame.origin.y
-        
-        scrollView.addSubview(fighter7Button)
-        
-        fighter8ImageView = UIImageView(frame: CGRect(x: width*0.5, y: yPosition, width: width*0.45, height: 150))
-        fighter8ImageView.contentMode = .scaleAspectFill
-        fighter8ImageView.layer.cornerRadius = fighter8ImageView.frame.height/2
-        fighter8ImageView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner]
-        
-        scrollView.addSubview(fighter8ImageView)
-        
-        winner8ImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
-        winner8ImageView.image = UIImage(named: "winner")
-        winner8ImageView.contentMode = .scaleAspectFit
-        winner8ImageView.frame.origin.x = fighter8ImageView.frame.origin.x + fighter8ImageView.frame.width - winner8ImageView.frame.width - 10
-        winner8ImageView.isHidden = true
-        winner8ImageView.alpha = 0
-        winner8ImageView.frame.origin.y = fighter8ImageView.frame.origin.y + 5
-        
-        scrollView.addSubview(winner8ImageView)
-        
-        fighter8View = UIView(frame: CGRect(x: width*0.5, y: 0, width: width*0.45, height: 50))
-        fighter8View.backgroundColor = .goldBack()
-        fighter8View.layer.cornerRadius = 12
-        fighter8View.layer.maskedCorners = [.layerMaxXMaxYCorner]
-        fighter8View.frame.origin.y = yPosition + fighter8ImageView.frame.height
-        
-        scrollView.addSubview(fighter8View)
-        
-        fighter8Label = UILabel(frame: CGRect(x: 0, y: 0, width: width*0.4, height: 45))
-        fighter8Label.textColor = .black
-        fighter8Label.font = UIFont.defaultFont(size: 16, type: .regular)
-        fighter8Label.numberOfLines = 0
-        fighter8Label.lineBreakMode = .byWordWrapping
-        fighter8Label.textAlignment = .center
-        fighter8Label.center.x = fighter8View.center.x
-        fighter8Label.center.y = fighter8View.center.y
-        
-        scrollView.addSubview(fighter8Label)
-        
-        fighter8Button = UIButton(frame: CGRect(x: width*0.5, y: 0, width: width*0.45, height: 200))
-        fighter8Button.backgroundColor = .clear
-        fighter8Button.layer.cornerRadius = 12
-        fighter8Button.layer.maskedCorners = [.layerMaxXMaxYCorner]
-        fighter8Button.frame.origin.y = fighter8ImageView.frame.origin.y
-        
-        scrollView.addSubview(fighter8Button)
-        
-        versus4ImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        versus4ImageView.image = UIImage(named: "versus")
-        versus4ImageView.contentMode = .scaleAspectFit
-        versus4ImageView.center.x = width/2
-        versus4ImageView.center.y = fighter7ImageView.center.y
-        
-        scrollView.addSubview(versus4ImageView)
-        
         //------------------------- Next Button -----------------------------
         
         nextButton = UIButton(frame: CGRect(x: 0, y: 0, width: width*0.9, height: 50))
@@ -517,7 +288,7 @@ class Round1View: UIView {
         nextButton.setTitle("Next", for: .normal)
         nextButton.setTitleColor(.black, for: .normal)
         nextButton.center.x = width/2
-        nextButton.frame.origin.y = fighter8Button.frame.origin.y + fighter8Button.frame.height + 30
+        nextButton.frame.origin.y = fighter4Button.frame.origin.y + fighter4Button.frame.height + 30
         nextButton.layer.cornerRadius = 12
         
         scrollView.addSubview(nextButton)
@@ -533,6 +304,7 @@ class Round1View: UIView {
     }
     
 }
+
 
 
 

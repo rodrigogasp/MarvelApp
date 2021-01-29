@@ -10,6 +10,11 @@
 		0402ACD225ABF7880044BEC7 /* CharacterComicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402ACD125ABF7880044BEC7 /* CharacterComicsCell.swift */; };
 		0405FB5325AB59EF00282C1B /* Comics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405FB5225AB59EF00282C1B /* Comics.swift */; };
 		0405FB5625AB5A5700282C1B /* DAOComics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405FB5525AB5A5700282C1B /* DAOComics.swift */; };
+		0410831825C3AA3400C7630C /* Round2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410831725C3AA3400C7630C /* Round2View.swift */; };
+		0410831B25C3AA9B00C7630C /* Round2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410831A25C3AA9B00C7630C /* Round2VC.swift */; };
+		0410831E25C3ACEB00C7630C /* FinalRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410831D25C3ACEB00C7630C /* FinalRoundView.swift */; };
+		0410832125C3ADEB00C7630C /* FinalRoundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410832025C3ADEB00C7630C /* FinalRoundVC.swift */; };
+		0410832425C3AEAE00C7630C /* WinnerPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410832325C3AEAE00C7630C /* WinnerPopUp.swift */; };
 		043DBB6625A36CC200BEA18F /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBB6525A36CC200BEA18F /* CharacterView.swift */; };
 		043DBB6925A36D2500BEA18F /* CharacterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043DBB6825A36D2500BEA18F /* CharacterVC.swift */; };
 		045D125B25B7A88E00C7526E /* Round1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D125A25B7A88E00C7526E /* Round1View.swift */; };
@@ -52,6 +57,11 @@
 		0402ACD125ABF7880044BEC7 /* CharacterComicsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterComicsCell.swift; sourceTree = "<group>"; };
 		0405FB5225AB59EF00282C1B /* Comics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comics.swift; sourceTree = "<group>"; };
 		0405FB5525AB5A5700282C1B /* DAOComics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOComics.swift; sourceTree = "<group>"; };
+		0410831725C3AA3400C7630C /* Round2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round2View.swift; sourceTree = "<group>"; };
+		0410831A25C3AA9B00C7630C /* Round2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round2VC.swift; sourceTree = "<group>"; };
+		0410831D25C3ACEB00C7630C /* FinalRoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalRoundView.swift; sourceTree = "<group>"; };
+		0410832025C3ADEB00C7630C /* FinalRoundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalRoundVC.swift; sourceTree = "<group>"; };
+		0410832325C3AEAE00C7630C /* WinnerPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerPopUp.swift; sourceTree = "<group>"; };
 		043DBB6525A36CC200BEA18F /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 		043DBB6825A36D2500BEA18F /* CharacterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterVC.swift; sourceTree = "<group>"; };
 		045D125A25B7A88E00C7526E /* Round1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round1View.swift; sourceTree = "<group>"; };
@@ -111,6 +121,8 @@
 			children = (
 				04F6265325AFE83400EE36E2 /* DuelsView.swift */,
 				045D125A25B7A88E00C7526E /* Round1View.swift */,
+				0410831725C3AA3400C7630C /* Round2View.swift */,
+				0410831D25C3ACEB00C7630C /* FinalRoundView.swift */,
 			);
 			path = Duels;
 			sourceTree = "<group>";
@@ -120,6 +132,8 @@
 			children = (
 				04F6265625AFE85200EE36E2 /* DuelsVC.swift */,
 				045D125D25B7AD9000C7526E /* Round1VC.swift */,
+				0410831A25C3AA9B00C7630C /* Round2VC.swift */,
+				0410832025C3ADEB00C7630C /* FinalRoundVC.swift */,
 			);
 			path = Duels;
 			sourceTree = "<group>";
@@ -216,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				046CFD15259C13A200595FBD /* LoadingPopUp.swift */,
+				0410832325C3AEAE00C7630C /* WinnerPopUp.swift */,
 			);
 			path = PopUp;
 			sourceTree = "<group>";
@@ -430,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0410832125C3ADEB00C7630C /* FinalRoundVC.swift in Sources */,
 				04A83C34259C0C190089A8E5 /* StartVC.swift in Sources */,
 				04F9450B259CEC1F0015DBAD /* CharacterAPI.swift in Sources */,
 				04F9451E259CEDC60015DBAD /* CharactersCell.swift in Sources */,
@@ -446,12 +462,15 @@
 				0402ACD225ABF7880044BEC7 /* CharacterComicsCell.swift in Sources */,
 				04F9450E259CEC780015DBAD /* Thumbnail.swift in Sources */,
 				04F9451A259CED7E0015DBAD /* HomeView.swift in Sources */,
+				0410831B25C3AA9B00C7630C /* Round2VC.swift in Sources */,
 				0405FB5325AB59EF00282C1B /* Comics.swift in Sources */,
 				043DBB6925A36D2500BEA18F /* CharacterVC.swift in Sources */,
+				0410831E25C3ACEB00C7630C /* FinalRoundView.swift in Sources */,
 				04F6265425AFE83400EE36E2 /* DuelsView.swift in Sources */,
 				04F94502259CEBC60015DBAD /* API.swift in Sources */,
 				04F944FF259CEB8C0015DBAD /* ServerResponse.swift in Sources */,
 				045D125E25B7AD9000C7526E /* Round1VC.swift in Sources */,
+				0410832425C3AEAE00C7630C /* WinnerPopUp.swift in Sources */,
 				04A83C22259C0B0F0089A8E5 /* Marvel_App.xcdatamodeld in Sources */,
 				0405FB5625AB5A5700282C1B /* DAOComics.swift in Sources */,
 				04F94521259CEE0E0015DBAD /* CardView.swift in Sources */,
@@ -460,6 +479,7 @@
 				04A83C53259C109C0089A8E5 /* Loading.swift in Sources */,
 				04A83C1A259C0B0F0089A8E5 /* SceneDelegate.swift in Sources */,
 				04F94526259CF8510015DBAD /* TabBarController.swift in Sources */,
+				0410831825C3AA3400C7630C /* Round2View.swift in Sources */,
 				04F94514259CED020015DBAD /* UIFont+Extension.swift in Sources */,
 				046BDFB125A0045800BA3B4C /* LoadMoreCell.swift in Sources */,
 				04F6265725AFE85200EE36E2 /* DuelsVC.swift in Sources */,

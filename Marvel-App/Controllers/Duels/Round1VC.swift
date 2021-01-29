@@ -20,6 +20,8 @@ class Round1VC: UIViewController {
     
     var fighters : [Character] = []
     
+    var winnersArray : [Character] = []
+    
     /* **************************************************************************************************
      **
      **  MARK: View
@@ -39,6 +41,7 @@ class Round1VC: UIViewController {
         round1View.fighter6Button.addTarget(self, action: #selector(fighter6Action), for: .touchUpInside)
         round1View.fighter7Button.addTarget(self, action: #selector(fighter7Action), for: .touchUpInside)
         round1View.fighter8Button.addTarget(self, action: #selector(fighter8Action), for: .touchUpInside)
+        round1View.nextButton.addTarget(self, action: #selector(nextRoundAction), for: .touchUpInside)
     
         
     }
@@ -180,6 +183,8 @@ class Round1VC: UIViewController {
             self.round1View.versus1ImageView.isHidden = true
             self.round1View.winner1ImageView.isHidden = false
             
+            self.winnersArray.append(self.fighters[0])
+            
             UIView.animate(withDuration: 0.5) {
                 
                 self.round1View.winner1ImageView.alpha = 1
@@ -211,6 +216,8 @@ class Round1VC: UIViewController {
             self.round1View.fighter2Button.isUserInteractionEnabled = false
             self.round1View.versus1ImageView.isHidden = true
             self.round1View.winner2ImageView.isHidden = false
+            
+            self.winnersArray.append(self.fighters[1])
             
             UIView.animate(withDuration: 0.5) {
                 
@@ -244,6 +251,8 @@ class Round1VC: UIViewController {
             self.round1View.versus2ImageView.isHidden = true
             self.round1View.winner3ImageView.isHidden = false
             
+            self.winnersArray.append(self.fighters[2])
+            
             UIView.animate(withDuration: 0.5) {
                 
                 self.round1View.winner3ImageView.alpha = 1
@@ -275,6 +284,8 @@ class Round1VC: UIViewController {
             self.round1View.fighter4Button.isUserInteractionEnabled = false
             self.round1View.versus2ImageView.isHidden = true
             self.round1View.winner4ImageView.isHidden = false
+            
+            self.winnersArray.append(self.fighters[3])
             
             UIView.animate(withDuration: 0.5) {
                 
@@ -308,6 +319,8 @@ class Round1VC: UIViewController {
             self.round1View.versus3ImageView.isHidden = true
             self.round1View.winner5ImageView.isHidden = false
             
+            self.winnersArray.append(self.fighters[4])
+            
             UIView.animate(withDuration: 0.5) {
                 
                 self.round1View.winner5ImageView.alpha = 1
@@ -339,6 +352,8 @@ class Round1VC: UIViewController {
             self.round1View.fighter6Button.isUserInteractionEnabled = false
             self.round1View.versus3ImageView.isHidden = true
             self.round1View.winner6ImageView.isHidden = false
+            
+            self.winnersArray.append(self.fighters[5])
             
             UIView.animate(withDuration: 0.5) {
                 
@@ -372,6 +387,8 @@ class Round1VC: UIViewController {
             self.round1View.versus4ImageView.isHidden = true
             self.round1View.winner7ImageView.isHidden = false
             
+            self.winnersArray.append(self.fighters[6])
+            
             UIView.animate(withDuration: 0.5) {
                 
                 self.round1View.winner7ImageView.alpha = 1
@@ -404,6 +421,8 @@ class Round1VC: UIViewController {
             self.round1View.versus4ImageView.isHidden = true
             self.round1View.winner8ImageView.isHidden = false
             
+            self.winnersArray.append(self.fighters[7])
+            
             UIView.animate(withDuration: 0.5) {
                 
                 self.round1View.winner8ImageView.alpha = 1
@@ -414,6 +433,34 @@ class Round1VC: UIViewController {
         }
         
         GenericAlert.genericAlert(self, title: "Are you sure you want \(self.fighters[7].name) to be the winner of this battle?", message: "", actions: [cancelAction, yesAction])
+        
+    }
+    
+    /* **************************************************************************************************
+     **
+     **  MARK: Nexr round Action
+     **
+     ****************************************************************************************************/
+    
+    @objc func nextRoundAction() {
+        
+        if self.winnersArray.count != 4 {
+            
+            GenericAlert.genericAlert(self, title: "You must choose a winner for each battle!", message: "", actions: [])
+            
+            return
+            
+        }
+        
+        let vc = Round2VC()
+        
+        vc.fighters = self.winnersArray
+        
+        vc.modalTransitionStyle = .flipHorizontal
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    
+        
         
     }
     
