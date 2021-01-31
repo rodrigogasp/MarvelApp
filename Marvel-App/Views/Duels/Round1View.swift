@@ -114,6 +114,18 @@ class Round1View: UIView {
         
         scrollView.addSubview(backButton)
         
+        //------------------------- Title Label -----------------------------
+        
+        titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        titleLabel.text = "Round 1"
+        titleLabel.textColor = .goldBack()
+        titleLabel.font = UIFont.defaultFont(size: 24, type: .regular)
+        titleLabel.sizeToFit()
+        titleLabel.center.y = backButton.center.y
+        titleLabel.center.x = width/2
+        
+        scrollView.addSubview(titleLabel)
+        
         //------------------------- Fight 1 -----------------------------
         
         fighter1ImageView = UIImageView(frame: CGRect(x: width*0.05, y: yPosition, width: width*0.45, height: 150))

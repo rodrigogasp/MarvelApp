@@ -90,11 +90,7 @@ class WinnerPopUp: UIView {
         backButton.layer.cornerRadius = backButton.frame.height/2
         
         addSubview(backButton)
-        
-        
-        
-
-        
+ 
     }
     
     required init?(coder aDecoder: NSCoder) {
