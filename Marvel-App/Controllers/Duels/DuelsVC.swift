@@ -97,11 +97,21 @@ class DuelsVC: UIViewController {
 
     @objc func startAction() {
         
-        let vc = Round1VC()
+        self.startLoading()
         
-        vc.fighters = self.namesArray
-        
-        self.navigationController?.pushViewController(vc, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            
+            self.stopLoading()
+            
+            let vc = Round1VC()
+            
+            vc.fighters = self.namesArray
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+            
+            
+        }
         
     }
     

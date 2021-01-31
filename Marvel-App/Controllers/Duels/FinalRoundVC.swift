@@ -47,6 +47,8 @@ class FinalRoundVC: UIViewController {
 
         winnerPopup.center.y = view.center.y
         
+        winnerPopup.backButton.addTarget(self, action: #selector(closeAction), for: .touchUpInside)
+        
         //------------------------- Visual Effect -------------------------------
 
         visualEffectView = UIVisualEffectView()
@@ -59,9 +61,7 @@ class FinalRoundVC: UIViewController {
         let tapVisual = UITapGestureRecognizer(target: self, action: #selector(closeView))
 
         visualEffectView.addGestureRecognizer(tapVisual)
-        
-    
-        
+ 
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -181,9 +181,27 @@ class FinalRoundVC: UIViewController {
             self.finalRoundView.versus1ImageView.isHidden = true
             self.finalRoundView.winner2ImageView.isHidden = false
             
+            self.winner = self.fighters[1]
+            
             UIView.animate(withDuration: 0.5) {
                 
                 self.finalRoundView.winner2ImageView.alpha = 1
+                
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                
+                self.winnerPopup.nameLabel.text = self.winner.name
+                
+                var url = URL(string: "\(self.winner.thumbnail.path).\(self.winner.thumbnail.type)")
+                
+                if url != nil {
+                    
+                    self.winnerPopup.characterImage.sd_setImage(with: url, completed: nil)
+                    
+                }
+                
+                self.openWinnerPopUp()
                 
             }
             
@@ -274,6 +292,20 @@ class FinalRoundVC: UIViewController {
             self.animatingCloseView(removeView: viewAdded)
 
         }
+    }
+    
+    /* *************************************************************************************
+    **
+    **  MARK: Close Action
+    **
+    ***************************************************************************************/
+    
+    @objc func closeAction() {
+        
+        self.closeView()
+        
+        self.navigationController?.popToRootViewController(animated: true)
+        
     }
     
 }

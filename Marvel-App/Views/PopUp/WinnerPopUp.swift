@@ -45,7 +45,7 @@ class WinnerPopUp: UIView {
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.3
         
-        var yPosition = height*0.1
+        var yPosition = height*0.075
         
         //------------------------- Character Image -----------------------------
         
@@ -65,6 +65,7 @@ class WinnerPopUp: UIView {
         nameLabel.center.x = width/2
         nameLabel.numberOfLines = 0
         nameLabel.lineBreakMode = .byWordWrapping
+        nameLabel.textAlignment = .center
         
         addSubview(nameLabel)
         

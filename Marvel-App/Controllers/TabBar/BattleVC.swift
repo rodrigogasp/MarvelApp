@@ -37,6 +37,8 @@ class BattleVC: UIViewController  {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        
         self.battleView.battleButton.frame.origin.x = 0 - self.view.frame.width/2
         self.battleView.rankingButton.frame.origin.x = self.view.frame.width + self.view.frame.width/2
         self.battleView.cardView.frame.origin.x = 0 - self.view.frame.width/2

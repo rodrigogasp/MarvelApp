@@ -34,7 +34,7 @@ class HomeView: UIView {
         let width = view.frame.size.width
         let height = view.frame.size.height - parent.tabBarController!.tabBar.frame.height
         
-        var yPosition = height*0.05
+        var yPosition = height*0.075
         
         //------------------------- Search Text Field -----------------------------
         

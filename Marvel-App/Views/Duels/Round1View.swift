@@ -19,6 +19,8 @@ class Round1View: UIView {
     var scrollView: UIScrollView!
     
     var backButton : UIButton!
+    
+    var titleLabel : UILabel!
 
     var fighter1ImageView : UIImageView!
     var fighter1Label : UILabel!
