@@ -16,6 +16,8 @@ class HomeView: UIView {
 
     var searchTextField : UITextField!
     
+    var cleanFilterButton : UIButton!
+    
     var barIcon : UIImageView!
     
     var tableView : UITableView!
@@ -48,6 +50,9 @@ class HomeView: UIView {
         
         view.addSubview(searchTextField)
         
+        yPosition = yPosition + searchTextField.frame.height + 10
+        
+        
         //------------------------- Bar icon -----------------------------
         
         barIcon = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
@@ -59,7 +64,18 @@ class HomeView: UIView {
         
         view.addSubview(barIcon)
         
-        yPosition = yPosition + searchTextField.frame.height + 15
+        
+        //------------------------- Clean Filter -----------------------------
+        
+        cleanFilterButton = UIButton(frame: CGRect(x: width*0.1, y: yPosition, width: 0, height: 0))
+        cleanFilterButton.setTitle("Clean filter  X", for: .normal)
+        cleanFilterButton.setTitleColor(.goldBack(), for: .normal)
+        cleanFilterButton.titleLabel?.font = UIFont.defaultFont(size: 18, type: .bold)
+        cleanFilterButton.sizeToFit()
+        
+        view.addSubview(cleanFilterButton)
+        
+        yPosition = yPosition + cleanFilterButton.frame.height + 15
         
         //-----------------------------Table View-------------------------------------
         

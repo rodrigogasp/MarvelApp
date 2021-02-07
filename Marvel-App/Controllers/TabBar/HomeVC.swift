@@ -39,9 +39,13 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         //---------------------------Buttons targets-----------------------------
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(closeAction))
+        self.homeView.cleanFilterButton.addTarget(self, action: #selector(closeAction), for: .touchUpInside)
         
-        self.homeView.barIcon.addGestureRecognizer(tap)
+        self.homeView.searchTextField.addTarget(self, action: #selector(searchAction), for: .editingDidEnd)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(searchAction))
+        
+        homeView.barIcon.addGestureRecognizer(tap)
  
         //---------------------------Delegate-----------------------------
         
@@ -188,14 +192,18 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let vc = CharacterVC()
-        
-        vc.modalPresentationStyle = .fullScreen
-        
-        vc.character = self.characters[indexPath.row]
-        
-        self.navigationController?.pushViewController(vc, animated: true)
-
+        if indexPath.row != self.characters.count && self.characters.count != 0 {
+            
+            let vc = CharacterVC()
+            
+            vc.modalPresentationStyle = .fullScreen
+            
+            vc.character = self.characters[indexPath.row]
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+            
+        }
         
     }
     
@@ -220,8 +228,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.offset = 0
         
         self.startLoading()
-        
-        self.homeView.barIcon.image = UIImage(named: "close")
         
         CharactersAPI.getCharactersByName(offset: self.offset, name: self.homeView.searchTextField.text!.replacingOccurrences(of: " ", with: "_")) { (response) in
             
@@ -299,10 +305,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 
             }
             
-        } else if self.isSearch == true {
-            
-            self.searchAction()
-            
         }
      
     }
@@ -314,6 +316,12 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
      ****************************************************************************************************/
     
     @objc func loadMore() {
+        
+        if self.moreResults == false {
+            
+            return
+            
+        }
             
         if self.isSearch == true {
             
